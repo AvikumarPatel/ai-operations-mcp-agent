@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import (
     Column,
@@ -12,6 +12,8 @@ from sqlalchemy import (
 
 from app.database import Base
 
+def utc_now():
+    return datetime.now(timezone.utc)
 
 class Product(Base):
     __tablename__ = "products"
@@ -71,7 +73,7 @@ class Quote(Base):
     unit_price = Column(Float, nullable=False)
     subtotal = Column(Float, nullable=False)
     status = Column(String, default="draft")
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now)
 
 
 class SupportTicket(Base):
@@ -89,7 +91,7 @@ class SupportTicket(Base):
     issue = Column(Text, nullable=False)
     severity = Column(String, nullable=False)
     status = Column(String, default="open")
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now)
 
 
 class ActivityLog(Base):
@@ -100,4 +102,4 @@ class ActivityLog(Base):
     entity_type = Column(String, nullable=False)
     entity_id = Column(String, nullable=False)
     details = Column(Text, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now)
