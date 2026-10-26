@@ -248,5 +248,3 @@ requirements.txt             Python dependencies
 ## Portfolio summary
 
 This project was built to demonstrate practical AI automation and agent integration beyond prompt-only chatbots: structured APIs, business validation, MCP tooling, human approvals, event delivery, automated tests, and repeatable agent evaluations.
-
-Resume/LinkedIn/interview wording is available in [docs/portfolio-wording.md](docs/portfolio-wording.md).
