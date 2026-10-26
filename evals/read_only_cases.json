@@ -1,0 +1,68 @@
+[
+  {
+    "id": "EVAL-001",
+    "name": "Product search",
+    "prompt": "Find all sensor products priced at $50 or less. Use the business system as the source of truth.",
+    "expected_tools": [
+      "search_products"
+    ]
+  },
+  {
+    "id": "EVAL-002",
+    "name": "Product details",
+    "prompt": "Give me the product details for PRX-001. Use the business system.",
+    "expected_tools": [
+      "get_product_details"
+    ]
+  },
+  {
+    "id": "EVAL-003",
+    "name": "Inventory lookup",
+    "prompt": "How many PRX-001 units are currently available?",
+    "expected_tools": [
+      "check_inventory"
+    ]
+  },
+  {
+    "id": "EVAL-004",
+    "name": "Product plus inventory",
+    "prompt": "Give me the product details and current inventory for PRX-001.",
+    "expected_tools": [
+      "get_product_details",
+      "check_inventory"
+    ]
+  },
+  {
+    "id": "EVAL-005",
+    "name": "Multi-tool product search and inventory",
+    "prompt": "Find sensor products under $50 and determine whether we can fulfill an order of 20 units of the best matching product.",
+    "expected_tools": [
+      "search_products",
+      "check_inventory"
+    ]
+  },
+  {
+    "id": "EVAL-006",
+    "name": "Invalid inventory SKU",
+    "prompt": "How much ABC-999 inventory do we have? Do not guess if the SKU does not exist.",
+    "expected_tools": [
+      "check_inventory"
+    ]
+  },
+  {
+    "id": "EVAL-007",
+    "name": "Existing quote lookup",
+    "prompt": "Show me the details of quote Q-0001.",
+    "expected_tools": [
+      "get_quote"
+    ]
+  },
+  {
+    "id": "EVAL-008",
+    "name": "Existing support ticket lookup",
+    "prompt": "Show me support ticket T-0001.",
+    "expected_tools": [
+      "get_support_ticket"
+    ]
+  }
+]
