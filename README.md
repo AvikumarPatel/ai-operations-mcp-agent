@@ -4,7 +4,7 @@ A guarded AI operations agent for industrial product, inventory, quotation, and 
 
 The project demonstrates an end-to-end agentic architecture in which Codex selects custom MCP tools to retrieve live business data and perform controlled write actions through a tested REST API. Write operations use a two-stage **prepare → human confirmation → execute** flow with short-lived, action-bound, single-use confirmation tokens, audit logging, and webhook delivery.
 
-> **Portfolio note:** The data in this repository is fictional sample data for demonstration. This project is not affiliated with or deployed by any specific employer or customer.
+> **Note:** The data in this repository is fictional sample data for demonstration. This project is not affiliated with or deployed by any specific employer or customer.
 
 ## Engineering validation
 
@@ -245,6 +245,6 @@ pytest.ini                   Test configuration
 requirements.txt             Python dependencies
 ```
 
-## Portfolio summary
+## What this project demonstrates
 
 This project was built to demonstrate practical AI automation and agent integration beyond prompt-only chatbots: structured APIs, business validation, MCP tooling, human approvals, event delivery, automated tests, and repeatable agent evaluations.
